@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1 titel: #{title}
+
+  form#chat-form
+    input#input-chat
+    button Zeg!
+
+  ol#messages
+
+  form(action="/save", method="post")
+    ol
+      li
+        label(for="input-name") Naam:
+        input#input-name(name="name")
+      li
+        label(for="input-price") Prijs:
+        input#input-price(type="number", name="price")
+      li
+        button Submit
+
+  table.wauw
+    thead
+    tr
+        th Naam
+        th Prijs
+    tbody
+    for p in amusementParks
+        tr
+        td= p.name
+        td #{p.price}

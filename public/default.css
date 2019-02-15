@@ -1,0 +1,10 @@
+body {
+    background: lightgoldenrodyellow;
+    font-family: sans-serif;
+}
+
+form ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
